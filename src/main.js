@@ -1,12 +1,18 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import "./assets/css/global.css";
+import "./plugins/element.js";
 
-Vue.config.productionTip = false
+import instance from "./network/network";
+
+Vue.config.productionTip = false;
+
+Vue.prototype.$http = instance;
 
 new Vue({
   router,
   store,
-  render: h => h(App)
-}).$mount('#app')
+  render: (h) => h(App),
+}).$mount("#app");
