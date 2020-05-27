@@ -1,9 +1,9 @@
 <template>
-  <div>首页</div>
+  <div>Welcome！</div>
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style>
