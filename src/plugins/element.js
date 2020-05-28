@@ -26,6 +26,7 @@ import {
   Dialog,
   MessageBox,
   Select,
+  Cascader,
   Option,
   Tag,
   Tree
@@ -55,6 +56,7 @@ Vue.use(Tooltip)
 Vue.use(Pagination)
 Vue.use(Dialog)
 Vue.use(Select)
+Vue.use(Cascader)
 Vue.use(Option)
 Vue.use(Tag)
 Vue.use(Tree)

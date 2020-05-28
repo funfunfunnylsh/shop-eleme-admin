@@ -67,7 +67,7 @@
           </template>
         </el-table-column>
       </el-table>
-      <!-- 分页区域 -->
+      <!-- 分页 -->
       <el-pagination
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
@@ -75,7 +75,7 @@
         :page-sizes="[2, 5, 10, 15]"
         :page-size="queryInfo.pagesize"
         layout="total, sizes, prev, pager, next, jumper"
-        :total="totle"
+        :total="total"
       ></el-pagination>
     </el-card>
     <!-- 添加用户的对话框 -->
@@ -271,15 +271,14 @@ export default {
         this.getUserList()
       }
     },
-    // 监听 pagesize改变的事件
+    // 监听 pageSizeChange
     handleSizeChange(newSize) {
-      // console.log(newSize)
       this.queryInfo.pagesize = newSize
       this.getUserList()
     },
-    // 监听 页码值 改变事件
-    handleCurrentChange(newSize) {
-      this.queryInfo.pagenum = newSize
+    // 监听 pagenum改变
+    handleCurrentChange(newPage) {
+      this.queryInfo.pagenum = newPage
       this.getUserList()
     },
     // 监听 switch开关 状态改变
