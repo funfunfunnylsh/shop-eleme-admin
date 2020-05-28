@@ -35,19 +35,19 @@ const routes = [
       },
       {
         path: '/categories',
-        component: () => import('components/permission/Roles')
+        component: () => import('components/goods/Category')
       },
       {
         path: '/params',
-        component: () => import('components/permission/Roles')
+        component: () => import('components/goods/Params')
       },
       {
         path: '/goods',
-        component: () => import('components/permission/Roles')
+        component: () => import('components/goods/GoodsList')
       },
       {
         path: '/goods/add',
-        component: () => import('components/permission/Roles')
+        component: () => import('components/goods/GoodsList')
       },
       {
         path: '/orders',
