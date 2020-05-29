@@ -197,11 +197,14 @@ export default {
     },
     // 获取index
     getTreeIndex(catId) {
-      for (let i = 0; i < this.cateList.length; i++) {
-        if (this.cateList[i].cat_id === catId) {
-          return i + 1
-        }
-      }
+      // for (let i = 0; i < this.cateList.length; i++) {
+      //   if (this.cateList[i].cat_id === catId) {
+      //     return i + 1
+      //   }
+      // }
+      // 找到对应的索引值
+      let i = this.cateList.findIndex(item => item.cat_id === catId)
+      return i + 1 === 0 ? '' : i + 1
     },
     // 监听 pageSizeChange
     handleSizeChange(newSize) {

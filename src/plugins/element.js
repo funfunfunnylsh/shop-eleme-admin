@@ -29,7 +29,15 @@ import {
   Cascader,
   Option,
   Tag,
-  Tree
+  Tree,
+  Alert,
+  Tabs,
+  TabPane,
+  Step,
+  Steps,
+  Checkbox,
+  CheckboxGroup,
+  Upload
 } from 'element-ui'
 
 Vue.use(Button)
@@ -60,6 +68,14 @@ Vue.use(Cascader)
 Vue.use(Option)
 Vue.use(Tag)
 Vue.use(Tree)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)
+Vue.use(Step)
+Vue.use(Steps)
+Vue.use(Checkbox)
+Vue.use(CheckboxGroup)
+Vue.use(Upload)
 
 Vue.prototype.$confirm = MessageBox.confirm
 
