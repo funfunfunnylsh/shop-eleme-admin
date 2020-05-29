@@ -1,5 +1,9 @@
 import axios from 'axios'
 
+// 导入NProgress, 包对应的JS和CSS
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+
 // 本接口为测试接口,真实接口请联系coderwhy001
 const url = 'https://www.liulongbin.top:8888/api/private/v1/'
 
@@ -13,6 +17,7 @@ const instance = axios.create({
 // 2.1.请求拦截的作用
 instance.interceptors.request.use(
   config => {
+    NProgress.start()
     // 为请求头对象，添加token验证的Authorization字段
     config.headers.Authorization = window.sessionStorage.getItem('token')
     return config
@@ -26,6 +31,7 @@ instance.interceptors.request.use(
 // 2.2.响应拦截
 instance.interceptors.response.use(
   res => {
+    NProgress.done()
     return res.data
   },
   err => {
