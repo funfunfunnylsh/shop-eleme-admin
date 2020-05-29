@@ -51,11 +51,11 @@ const routes = [
       },
       {
         path: '/orders',
-        component: () => import('components/permission/Roles')
+        component: () => import('components/order/Order')
       },
       {
         path: '/reports',
-        component: () => import('components/permission/Roles')
+        component: () => import('components/report/Reports')
       }
     ]
   }
